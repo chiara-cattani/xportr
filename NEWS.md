@@ -18,10 +18,17 @@ time variables. (#298)
 
 ## Documentation
 
+* Added new vignette "You got options" covering `options()` and `xportr_options()` for column name mapping, verbose messaging, and type coercion settings. The corresponding content has been removed from the "Deep Dive" vignette, which now links to the new one. (#353)
+
 ## Miscellaneous
 
+
 * Removed `magrittr` from package `Imports` by replacing `magrittr::extract2()` with the base R `getElement()` function. (#358)
+
+* Removed `stringr` from `Imports`; all `str_detect()`, `str_sub()`, and `str_replace_all()` calls have been replaced with base R equivalents (`grepl()`, `substr()`, `gsub()`). (#366)
+
 * Removed `tidyselect` from `Imports`; `all_of()`, `any_of()`, and `where()` are now imported via `dplyr (>= 1.0.2)`, which already re-exports them. (#365)
+
 * Fixed Version Bump CI workflow by switching from an explicit `REPO_GITHUB_TOKEN` secret mapping to `secrets: inherit`, ensuring the auto-provisioned `GITHUB_TOKEN` is available as a fallback. (#355)
 
 * Standardized function calls by centralizing imports in R/xportr-package.R, replacing inconsistent use of package::function() syntax.

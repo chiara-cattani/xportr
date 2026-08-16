@@ -116,7 +116,6 @@
 #' @importFrom cli cli_alert_info cli_h2 cli_alert_success cli_div cli_text
 #'   cli_alert_danger cli_warn start_app stop_app
 #' @importFrom utils capture.output str tail packageVersion
-#' @importFrom stringr str_detect str_extract str_replace str_replace_all str_sub
 #' @importFrom purrr map_chr map2_chr walk iwalk map map_dbl pluck map_lgl
 #' @importFrom graphics stem
 #' @importFrom checkmate assert assert_character assert_choice assert_data_frame assert_subset
