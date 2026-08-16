@@ -34,8 +34,7 @@ Imports:
     lifecycle,
     magrittr,
     purrr (>= 0.3.4),
-    rlang (>= 0.4.10),
-    tidyselect
+    rlang (>= 0.4.10)
 Suggests: 
     DT,
     knitr,

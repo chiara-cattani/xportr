@@ -9,6 +9,7 @@ time variables. (#298)
 ## Bug Fixes
 * Fixed verbose option bugs in `xportr_format()` and added missing `xportr.order_verbose` option (#318)
 * Fixed `xportr_format()` to exclude variables ending with `ELTM` from the date/time format check, as these indicate time relative to an anchor time in SDTM or ADaM (#293)
+* Updated issue where variable label length messaging wasn't respecting 'verbose'. (#302)
 
 ## Breaking Changes and Deprecation
 
@@ -17,9 +18,14 @@ time variables. (#298)
 
 ## Documentation
 
+* Added new vignette "You got options" covering `options()` and `xportr_options()` for column name mapping, verbose messaging, and type coercion settings. The corresponding content has been removed from the "Deep Dive" vignette, which now links to the new one. (#353)
+
 ## Miscellaneous
 
 * Removed `stringr` from `Imports`; all `str_detect()`, `str_sub()`, and `str_replace_all()` calls have been replaced with base R equivalents (`grepl()`, `substr()`, `gsub()`). (#366)
+
+* Removed `tidyselect` from `Imports`; `all_of()`, `any_of()`, and `where()` are now imported via `dplyr (>= 1.0.2)`, which already re-exports them. (#365)
+
 * Fixed Version Bump CI workflow by switching from an explicit `REPO_GITHUB_TOKEN` secret mapping to `secrets: inherit`, ensuring the auto-provisioned `GITHUB_TOKEN` is available as a fallback. (#355)
 
 * Standardized function calls by centralizing imports in R/xportr-package.R, replacing inconsistent use of package::function() syntax.
